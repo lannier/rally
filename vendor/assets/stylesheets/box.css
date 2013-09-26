@@ -1,0 +1,40 @@
+.box {
+    margin: 0 1em 1em 0;
+    padding: 1em;
+    font-size: 1.5em;
+    opacity: 0.8;
+    color: #FFFFFF;
+    height: 5em;
+    width: 10em;
+    float: left;
+}
+
+.box:hover {
+    opacity: 1;
+}
+
+.box a {
+    text-decoration: none;
+    color: #E5F4FD;
+}
+
+.box .box-content .info {
+    height: 100%;
+    float: left;
+    word-wrap: break-word;
+    width: 60%;
+    overflow: hidden;
+}
+
+.box .box-content .action {
+    height: 100%;
+    font-size: 3em;
+    text-align: right;
+}
+
+.box footer {
+    margin: 0;
+    height: 20%;
+    font-size: 0.8em;
+    text-align: right;
+}

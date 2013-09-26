@@ -1,0 +1,39 @@
+.ui-widget-overlay {
+    background: #AAAAAA;
+    opacity: .3 /*{opacityOverlay}*/;
+    filter: Alpha(Opacity=30) /*{opacityFilterOverlay}*/;
+}
+
+.ui-state-default{
+    border: 1px solid #D3D3D3
+}
+
+.ui-dialog {
+    background-color: #FFFFFF;
+}
+
+.ui-dialog-titlebar {
+    background-color: #37B6E8;
+    color: #FFFFFF;
+    font-size: 1.5em;
+}
+
+.ui-dialog-titlebar-close {
+    visibility: hidden;
+}
+
+.ui-dialog input[type="text"], .ui-dialog textarea {
+    margin-bottom: 1em;
+    padding: 0.4em;
+}
+
+.ui-dialog button {
+    background-color: #37B6E8;
+    border: 1px solid #D3D3D3;
+    color: #FFFFFF;
+    font-size: 1.5em;
+}
+
+.ui-dialog button.negative {
+    background-color: #CFCFCF;
+}

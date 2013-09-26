@@ -1,0 +1,112 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #F9F9F9;
+    font-size: 12px;
+    font-family: Microsoft YaHei, serif;
+}
+
+fieldset {
+    border: 0 none;
+    padding: 0;
+}
+
+header.page-header {
+    margin: 0;
+    padding: 1em 4em;
+    background-color: #37B6E8;
+    color: #E5F4FD;
+    overflow: hidden;
+}
+
+header.page-header .logo {
+    font-size: 2em;
+    float: left;
+}
+
+header.page-header .search {
+    float: right;
+    vertical-align: middle;
+}
+
+header.page-header .search input {
+    font-size: 1.5em;
+}
+
+footer {
+    margin: 0 1em;
+    text-align: center;
+    clear: both;
+}
+
+div.content {
+    margin: 1em;
+    padding: 1em;
+    background-color: #FFFFFF;
+    overflow: hidden;
+}
+
+.blue {
+    background-color: #61B9FF;
+}
+
+.green {
+    background-color: #00A489;
+}
+
+.orange {
+    background-color: #F37B53;
+}
+
+.light-purple {
+    background-color: #847CC5;
+}
+
+.light-green {
+    background-color: #94B86E;
+}
+
+.yellow {
+    background-color: #FFB848;
+}
+
+.table {
+    display: table;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.positive-text {
+    color: #61B9FF;
+}
+
+.negative-text {
+    color: grey;
+}
+
+#ushuaia-message-bar {
+    border: 1px solid transparent;
+    padding: 0.3em;
+}
+
+/* JQuery UI Theme*/
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    border: 1px solid #fcefa1/*{borderColorHighlight}*/;
+    background: #fbf9ee;
+    color: #363636/*{fcHighlight}*/;
+}
+
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+    border: 1px solid #cd0a0a/*{borderColorError}*/;
+    background: #fef1ec;
+    color: #cd0a0a/*{fcError}*/;
+}
+
+
