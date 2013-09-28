@@ -8,7 +8,7 @@ set :default_stage, "testing"
 # application setting
 set :application, "rally"
 #set :repository,  "git@gitorious.autonavi.com:lucy/rally.git"
-set :repository,  "git@192.168.1.105:rally.git"
+set :repository,  "git@github.com:lannier/rally.git"
 
 set :keep_releases, 5
 
@@ -24,7 +24,7 @@ set :scm, :git
 set :branch, "master"
 #set :deploy_to, "/opt/rally"
 set :deploy_to, "/var/www/rally"
-set :port, 25000
+#set :port, 25000
 
 set :deploy_via, :remote_cache
 #set :copy_dir, "tmp/rally.tar.gz"
@@ -34,16 +34,16 @@ set :deploy_via, :remote_cache
 
 # user
 #set :user, "root"
-set :password, "PMO@autonavi.com"
-set :user, "susan"
+#set :password, "PMO@autonavi.com"
+#set :user, "susan"
 #set :password, "liuweishan"
-#set :use_sudo, true
+set :use_sudo, true
 
 ssh_options[:forward_agent] = true
 
 
 #server '10.19.1.135', :app, :web, :db, :primary => true
-server '192.168.1.106', :app, :web, :db, :primary => true
+#server '192.168.1.137', :app, :web, :db, :primary => true
 
 after "deploy", "deploy:cleanup"
 
@@ -59,7 +59,7 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{application}"
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
-    put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    #put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
