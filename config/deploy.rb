@@ -13,7 +13,7 @@ set :repository,  "git@github.com:lannier/rally.git"
 set :keep_releases, 5
 
 #setup rvm 2.0.0
-set :rvm_ruby_string, '2.0.0'
+set :rvm_ruby_string, '2.0.0@rally'
 set :rvm_type, :system
 set :rvm_bin_path, "/usr/local/rvm/bin"
 
@@ -60,6 +60,7 @@ namespace :deploy do
     sudo "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{application}"
     run "mkdir -p #{shared_path}/config"
     #put File.read("config/database.example.yml"), "#{shared_path}/config/database.yml"
+    put File.read("config/database.yml"), "#{shared_path}/config/database.yml"
     puts "Now edit the config files in #{shared_path}."
   end
   after "deploy:setup", "deploy:setup_config"
@@ -77,7 +78,12 @@ namespace :deploy do
       exit
     end
   end
-  before "deploy", "deploy:check_revision"
+
+  task :install_bundler do
+    `gem install bundler`
+  end
+  #before "deploy", "deploy:check_revision"
+  before "deploy:setup", "deploy:install_bundler"
 
   # Install RVM and Ruby before deploy
   #before "deploy:setup", "rvm:install_rvm"
