@@ -44,5 +44,13 @@ end
 
 gem 'rerun', group: :development
 
+
+gem 'capistrano', group: [:development, :test]
+gem 'capistrano-ext', group: [:development, :test]
+gem 'rvm-capistrano', group: [:development, :test]
+gem 'unicorn'
+
+
+
 # Use debugger
 # gem 'debugger', group: [:development, :test]
